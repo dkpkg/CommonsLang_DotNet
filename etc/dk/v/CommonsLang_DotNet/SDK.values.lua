@@ -5889,7 +5889,7 @@ function CommonsLang_DotNet_SDK.form_values_unix(slot)
         slot,
         slot,
         "CommonsLang_DotNet.SDK.Bundle@10.0.100-rc.2.25502.107",
-        "dotnet-sdk-10.0.100-rc.2.25502.107-%s.tar.gz",
+        "dotnet-sdk-10.0.100-rc.2.25502.107-" .. arch .. ".tar.gz",
         paths_str)
   local precommands      = {
     private = {
