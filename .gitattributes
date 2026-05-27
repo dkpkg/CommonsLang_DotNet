@@ -1,0 +1,6 @@
+dk0 text eol=lf
+*.sh text eol=lf
+*.u text eol=lf
+*.lua text eol=lf
+*.jsonc text eol=lf
+NuGet.Config text eol=lf
