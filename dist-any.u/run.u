@@ -4,4 +4,7 @@
 
   $ run-rule CommonsLang_DotNet.SDK.Files@10.0.100-rc.2.25502.107 -d ${RUNTIME}/dotnetsdk slot=${SLOTNAME.Release.target_abi}
   \test(pass)
+  \dk.object(abi: "Release.Darwin_arm64", value-id: "omeptonb3lvjohv3jhkfnywlaopzthbmu5sopfhx2rsvj52t4j7fa")
+  \dk.object(abi: "Release.Darwin_x86_64", value-id: "ouhsmwl2phhzhtemmvybasneg73g2tsyypjgaeuhbhr2cpnbdhtya")
+  \dk.object(abi: "Release.Linux_x86_64", value-id: "okj6ob5frrxqbnz7qwl36c46tkxav7yexnqkc44zxlibdyh2nvd5ma")
   \dk.object(abi: "Release.Windows_x86_64", value-id: "or6s5y2u42ajh3phzfof3evcjtrpoh5c5b6xvsymfapuywbw3iufq")\;
