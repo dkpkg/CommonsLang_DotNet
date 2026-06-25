@@ -53,7 +53,7 @@ jobs:
           options: -nosysinc
           # The .NET SDK zip hits the default Windows 260-character MAX_PATH limit in CI.
           short-build-dir: ${{ runner.os == 'Windows' && 'C:\b' || '' }}
-          store: release
+          store: none
           distscript: ${{ matrix.distscript }}
           execution-abi: ${{ matrix.execution-abi }}
           target-abi: ${{ matrix.target-abi }}
