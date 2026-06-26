@@ -4,9 +4,9 @@
 
   $ run-rule CommonsLang_DotNet.SDK.Files@10.0.100-rc.2.25502.107 -d ${RUNTIME}/dotnetsdk slot=${SLOTNAME.Release.target_abi}
   \test(pass)
-  \dk.object(abi: "Release.Darwin_arm64", value-id: "omeptonb3lvjohv3jhkfnywlaopzthbmu5sopfhx2rsvj52t4j7fa")
-  \dk.object(abi: "Release.Darwin_x86_64", value-id: "ouhsmwl2phhzhtemmvybasneg73g2tsyypjgaeuhbhr2cpnbdhtya")
+  \dk.object(abi: "Release.Darwin_arm64", value-id: "om5x5uabwuwnj5uvg3mlmux6ndlwgzrzvrvzpvjm35krnorrrt6ua")
+  \dk.object(abi: "Release.Darwin_x86_64", value-id: "o2wxepiac5gysbkcas5iyb7fkquc5qpuszyb3cfgvclox3pc7w4kq")
   \dk.object(abi: "Release.Linux_x86_64", value-id: "oyffz7y5cxihn2gg67lvwmggyhv5fxm6lg6xbn3d643s4unmxjrpq")
-  \dk.object(abi: "Release.Windows_arm64", value-id: "ozy3tayor45ylidefgftv74sajo5fysa6adtpcluj5wjetuck3wla")
-  \dk.object(abi: "Release.Windows_x86", value-id: "oqnfeybftmgmshyci4tlrduoedsv2q7dmcj72mrmprjbiurijlfeq")
-  \dk.object(abi: "Release.Windows_x86_64", value-id: "or6s5y2u42ajh3phzfof3evcjtrpoh5c5b6xvsymfapuywbw3iufq")\;
+  \dk.object(abi: "Release.Windows_arm64", value-id: "owc4aakdczivprcp3db5zdc6wo2xahahez2qhdlil2lrph4umcfoa")
+  \dk.object(abi: "Release.Windows_x86", value-id: "ojkx2l5kmqput4lp5bphjlovaejqgawipsrskgk6fnb7n2tqkjlsq")
+  \dk.object(abi: "Release.Windows_x86_64", value-id: "omiybzneqmzfdza2ei527t7gtkjqtowyw25652iesag4g57d5a5ta")\;
