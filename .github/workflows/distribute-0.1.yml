@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-      - '2.5.*'
+      - '0.1.*'
   workflow_dispatch:
 
 jobs:
@@ -13,25 +13,25 @@ jobs:
       matrix:
         include:
           - runs-on: ubuntu-latest
-            distscript: dist-any.u
+            distscript: dist/any.u
             image: quay.io/pypa/manylinux_2_28_x86_64:2026.04.08-5
             target-abi: Linux_x86_64
           - runs-on: macos-latest
-            distscript: dist-any.u
+            distscript: dist/any.u
             execution-abi: Darwin_arm64
             target-abi: Darwin_arm64
           - runs-on: macos-latest
-            distscript: dist-any.u
+            distscript: dist/any.u
             execution-abi: Darwin_arm64
             target-abi: Darwin_x86_64
           - runs-on: windows-latest
-            distscript: dist-any.u
+            distscript: dist/any.u
             target-abi: Windows_x86
           - runs-on: windows-latest
-            distscript: dist-any.u
+            distscript: dist/any.u
             target-abi: Windows_x86_64
           - runs-on: windows-latest
-            distscript: dist-any.u
+            distscript: dist/any.u
             target-abi: Windows_arm64
 
     runs-on: ${{ matrix.runs-on }}
@@ -48,8 +48,8 @@ jobs:
       - name: Distribute Modules
         uses: diskuv/dk-distribute@v3
         with:
-          pubkey: ${{ secrets.distribute_2_5_pubkey }}
-          seckey: ${{ secrets.distribute_2_5_seckey }}
+          pubkey: ${{ secrets.distribute_0_1_pubkey }}
+          seckey: ${{ secrets.distribute_0_1_seckey }}
           options: -nosysinc
           # The .NET SDK zip hits the default Windows 260-character MAX_PATH limit in CI.
           short-build-dir: ${{ runner.os == 'Windows' && 'C:\b' || '' }}
@@ -57,7 +57,6 @@ jobs:
           distscript: ${{ matrix.distscript }}
           execution-abi: ${{ matrix.execution-abi }}
           target-abi: ${{ matrix.target-abi }}
-          experimental-dk-owner: ${{ github.repository_owner == 'dkpkg' && 'diskuv' || github.repository_owner }}
           experimental-mlfront-ref: ${{ github.ref_type != 'tag' && 'HEAD' }}
 
   combine:
