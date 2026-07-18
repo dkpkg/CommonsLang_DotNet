@@ -1,4 +1,20 @@
 # CommonsLang_DotNet
+
+## Overview
+
+Redistributes the Microsoft .NET SDK as a dk package, providing the dotnet toolchain across Windows, Linux, and macOS slots.
+
+`CommonsLang_DotNet` bundles the official Microsoft .NET SDK
+(10.0.100-rc.2.25502.107) archives for Windows (x64/x86/arm64), Linux
+(x64/arm64 and their musl variants), and macOS (x64/arm64) so downstream
+dk packages can consume the dotnet toolchain without a separate installer.
+The SDK binaries are fetched from Microsoft's official build endpoints and
+verified by SHA-256 checksum.
+
+## License
+
+MIT
+
 ## workspace
   %% actual_version("2.4.2.279")
 
