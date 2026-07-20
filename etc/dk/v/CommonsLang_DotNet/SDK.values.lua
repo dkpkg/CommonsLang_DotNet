@@ -5885,7 +5885,7 @@ function CommonsLang_DotNet_SDK.form_values_unix(slot)
 
   local postobject       =
       string.format(
-        "post-object CommonsBase_Std.Extract.F_Untar@0.1.0 -d ${SLOT.%s} modver=CommonsLang_DotNet.SDK.Unix.%s@10.0.100-rc.2.25502.107 tarmodver=%s tarassetpath=%s %s",
+        "run-function CommonsBase_Std.Extract.F_Untar@0.1.0 -d ${SLOT.%s} modver=CommonsLang_DotNet.SDK.Unix.%s@10.0.100-rc.2.25502.107 tarmodver=%s tarassetpath=%s %s",
         slot,
         slot,
         "CommonsLang_DotNet.SDK.Bundle@10.0.100-rc.2.25502.107",
