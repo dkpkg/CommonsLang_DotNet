@@ -16,7 +16,7 @@ verified by SHA-256 checksum.
 MIT
 
 ## workspace
-  %% actual_version("2.4.2.329")
+  %% actual_version("2.4.3.9")
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
   'import'
