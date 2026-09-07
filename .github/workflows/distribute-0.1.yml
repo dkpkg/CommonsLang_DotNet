@@ -53,7 +53,14 @@ jobs:
           options: -nosysinc
           # The .NET SDK zip hits the default Windows 260-character MAX_PATH limit in CI.
           short-build-dir: ${{ runner.os == 'Windows' && 'C:\b' || '' }}
-          store: release
+          # store: none, not release. Restoring from the previous release brings
+          # back that release's producer records, and the last one predates
+          # CommonsBase_Std moving input_assets out of declareoutput, so a
+          # restored Extract.F_Untar@0.1.0 still carries the shape the engine
+          # refuses with error 3e7a91c2. Repinning the import alone does not
+          # help: the restored record wins over the imported one. Same change
+          # CommonsBase_GNU and CommonsBase_LLVM made on 2026-07-18.
+          store: none
           distscript: ${{ matrix.distscript }}
           execution-abi: ${{ matrix.execution-abi }}
           target-abi: ${{ matrix.target-abi }}
