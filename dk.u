@@ -17,32 +17,25 @@ MIT
 
 ## workspace
   %% actual_version("2.4.3.9")
+  'actual_version'
+  '2.4.3.9'
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
-  'import'
-  'github-l2'
-  { {
-      'CommonsBase_Std', '2.6.20260907024430', {
-        'blake2b-256:e080f097f6e06bf5f48d42a267f99a5f173626429fd6442aabc2959dfaaaed77',
-        'sha256:97d0755a7b93e93a90cab131a7c23e4afc1a31723df35e39e6e21ae0d9dc3e13',
-        'sha1:eba0da920ecafae39d15e2ade4666cec5d9bcde5'
-      } } }
+  \dk.import(type: "github-l2", library: "CommonsBase_Std",
+    version: "2.6.20260913085659",
+    checksum: (blake2b-256: "8d601ad9945d5aae4afaa980e922f6d7bcb32a4effd0e3c12d03bf6c3b98839d",
+      sha256: "25224920a4b704b3693afe5343ce05c5cd2c0d9e19ce1641511707fb5af59887",
+      sha1: "f7dab451a2d2860aff9bdff09530b6de464255aa"))\;
 
 ## Assets
 
 ### CommonsLang_DotNet.Apparatus@1.0.0
 
   % unified.asset { name="ArchTable", dir="assets/table/dotnet/arch" }
-  'asset'
-  '1382'
-  { 'sha256:e304ac2d8d5679f31badd71c47a82f6cc16f89d4284e0a7f12f5a130066a56f4' }
+  \dk.asset(byteSize: "1382", checksum: (sha256: "e304ac2d8d5679f31badd71c47a82f6cc16f89d4284e0a7f12f5a130066a56f4"))\;
 
   % unified.asset { name="NuGetConfig", file="assets/nuget/NuGet.Config" }
-  'asset'
-  '321'
-  'sha256:b7b2fedda9c847bdee1e5d4035460c895cda1db56c28629940bfb4d200b6bb90'
+  \dk.asset(byteSize: "321", checksum: (sha256: "b7b2fedda9c847bdee1e5d4035460c895cda1db56c28629940bfb4d200b6bb90"))\;
 
   % unified.asset { name="NuGetPackages", dir="assets/nuget/packages" }
-  'asset'
-  '226'
-  { 'sha256:e21a238ce8fede4c01faa609588c44207a330515ce78a973e79c3443b1695ace' }
+  \dk.asset(byteSize: "226", checksum: (sha256: "e21a238ce8fede4c01faa609588c44207a330515ce78a973e79c3443b1695ace"))\;

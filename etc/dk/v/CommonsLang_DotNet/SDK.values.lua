@@ -6085,7 +6085,7 @@ function CommonsLang_DotNet_SDK.workaround_make_dotnet_executable(response, opti
       commands = {
         -- TODO: When coreutils does not require Windows to run (through S7z.Windows7zExe), we can
         -- avoid the system /bin/chmod and use the coreutils version ...
-        -- "$(get-object CommonsBase_Std.Coreutils@0.2.2 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f : -e '*')",         
+        -- "$(get-object CommonsBase_Std.Coreutils@0.8.0 -s ${SLOTNAME.Release.execution_abi} -m ./coreutils.exe -f : -e '*')",         
         -- "chmod",
         "/bin/chmod",
         "+x",
